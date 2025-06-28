@@ -3,42 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="AI-Powered Dermatological Assistant: Bridging Healthcare Gaps Through Multimodal Intelligence">
+  <meta name="keywords" content="Dermatology, AI, LLaVA, Medical AI, Computer Vision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>Derm-LLaVA: AI-Powered Dermatological Assistant</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <style>
+    .publication-title {
+      font-weight: bold;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .author-block a {
+      color: #3273dc;
+      text-decoration: none;
+    }
+    
+    .author-block a:hover {
+      text-decoration: underline;
+    }
+    
+    .derm-highlight {
+      color: #667eea;
+      font-weight: bold;
+    }
+    
+    .teaser-image {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    
+    .performance-table {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .framework-image {
+      border: 2px solid #667eea;
+      border-radius: 15px;
+      padding: 15px;
+      background: white;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    
+    .pipeline-section {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    
+    .results-section {
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+    
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .impact-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-left: 4px solid #667eea;
+    }
+    
+    .stat-highlight {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #667eea;
+    }
+    
+    .conversation-demo {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid #e9ecef;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .hero .title, .hero .subtitle {
+      color: white;
+    }
+    
+    .publication-links .button {
+      margin: 5px;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -52,76 +135,58 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More Research
+          Related Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="#framework">
+            AI Framework
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="#pipeline">
+            Training Pipeline
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
+          <a class="navbar-item" href="#results">
+            Results
           </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="#impact">
+            Global Impact
           </a>
         </div>
       </div>
     </div>
-
   </div>
 </nav>
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">AI-Powered Dermatological Assistant: Bridging Healthcare Gaps Through Multimodal Intelligence</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="#">Aranya Saha</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="#">Tanvir Ahmed Khan</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="#">Ismam Nur Swapnil</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="#">Mohammad Ariful Haque</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Department of Electrical and Electronic Engineering, Bangladesh University of Engineering and Technology</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -129,45 +194,35 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
+              <!-- Demo Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#demo"
+                   class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fas fa-play"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Demo</span>
                   </a>
+              </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -178,77 +233,30 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+      <div class="has-text-centered">
+        <div class="stat-highlight">82.05%</div>
+        <p class="is-size-4">Diagnostic Accuracy Achieved</p>
+        <div class="columns is-centered" style="margin-top: 2rem;">
+          <div class="column is-one-third has-text-centered">
+            <div class="stat-highlight">2.6B+</div>
+            <p>People lack dermatological care</p>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <div class="stat-highlight">8/10</div>
+            <p>Patient interaction score</p>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <div class="stat-highlight">4-Stage</div>
+            <p>Progressive training pipeline</p>
+          </div>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
+        <span class="derm-highlight">Derm-LLaVA</span> democratizes expert-level skin diagnosis through advanced multimodal AI, making specialized dermatological care accessible globally through any smartphone.
       </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -258,233 +266,356 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Over 2.6 billion people worldwide lack access to specialized dermatological care, leading to preventable suffering and advanced disease progression in underserved communities. We present <span class="derm-highlight">Derm-LLaVA</span>, an intelligent dermatological assistant that bridges this critical healthcare gap through advanced multimodal AI.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            Our system combines cutting-edge vision-language models with specialized medical training to deliver expert-level diagnostic capabilities. Through a sophisticated 4-stage training pipeline incorporating Group Relative Policy Optimization (GRPO), Direct Policy Optimization (DPO), and intelligent model compression, we achieve remarkable clinical performance while maintaining deployment efficiency.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            <span class="derm-highlight">Derm-LLaVA</span> demonstrates <strong>82.05% diagnostic accuracy</strong> compared to a 30.77% baseline, with an <strong>8/10 patient interaction score</strong>. Our framework integrates LLaVA for visual question answering, DINOv2 for disease classification, and LLaMA for medical knowledge retrieval, creating the first multimodal medical assistant specifically optimized for dermatological applications.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
-
-<section class="section">
+<section class="section" id="framework">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h2 class="title is-3 has-text-centered">Breakthrough AI Framework</h2>
+        
         <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
+          <p>We developed a sophisticated multimodal intelligence system combining cutting-edge AI techniques for clinical-grade dermatological diagnosis:</p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+
+        <div class="framework-image has-text-centered">
+          <figure class="image">
+            <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 40px; border-radius: 10px;">
+              <div style="font-size: 1.5rem; margin-bottom: 30px; color: #667eea;">
+                <i class="fas fa-eye"></i> → <i class="fas fa-brain"></i> → <i class="fas fa-comments"></i> → <i class="fas fa-stethoscope"></i>
+              </div>
+              <p><strong>User Input Image</strong> → <strong>Vision-Language Processing</strong> → <strong>Medical Reasoning</strong> → <strong>Clinical Diagnosis</strong></p>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
+          </figure>
+          <figcaption class="has-text-centered" style="margin-top: 10px;">
+            <strong>Our Integrated Multimodal Framework</strong>
+          </figcaption>
+        </div>
+
+        <div class="columns is-multiline" style="margin-top: 2rem;">
+          <div class="column is-half">
+            <div class="impact-card">
+              <h4 class="title is-5"><i class="fas fa-eye"></i> Vision Processing</h4>
+              <p><strong>LLaVA:</strong> Advanced vision-language model for visual question answering and medical image analysis</p>
+            </div>
           </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
+          <div class="column is-half">
+            <div class="impact-card">
+              <h4 class="title is-5"><i class="fas fa-search"></i> Disease Classification</h4>
+              <p><strong>DINOv2:</strong> Vision transformer fine-tuned for enhanced pattern recognition in dermatological conditions</p>
+            </div>
           </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          <div class="column is-half">
+            <div class="impact-card">
+              <h4 class="title is-5"><i class="fas fa-book-medical"></i> Knowledge Retrieval</h4>
+              <p><strong>LLaMA:</strong> Retrieval-augmented generation from comprehensive medical knowledge base</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="impact-card">
+              <h4 class="title is-5"><i class="fas fa-compress"></i> Efficient Deployment</h4>
+              <p><strong>Model Compression:</strong> Structured pruning enables deployment on resource-limited devices</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
 
+<section class="section pipeline-section" id="pipeline">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">4-Stage Training Pipeline</h2>
+    
+    <div class="content">
+      <p class="has-text-centered">Our systematic approach consists of four sequential enhancement stages, each building upon the previous to achieve clinical-grade performance:</p>
+    </div>
+
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <div class="box" style="background: white; border-left: 4px solid #667eea;">
+          <h4 class="title is-5"><span class="tag is-primary">Stage 1</span> Medical Reasoning Training</h4>
+          <p>Large Language and Vision Assistant fine-tuned for medical reasoning using Image Caption Dataset and GRPO optimization.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box" style="background: white; border-left: 4px solid #48c774;">
+          <h4 class="title is-5"><span class="tag is-success">Stage 2</span> Patient Communication Enhancement</h4>
+          <p>Fine-tuning on Image Conversation Dataset for natural patient interactions and empathetic responses.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box" style="background: white; border-left: 4px solid #ffdd57;">
+          <h4 class="title is-5"><span class="tag is-warning">Stage 3</span> Interaction Optimization</h4>
+          <p>Direct Policy Optimization (DPO) using Preference Dataset for improved response quality and clinical accuracy.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box" style="background: white; border-left: 4px solid #f14668;">
+          <h4 class="title is-5"><span class="tag is-danger">Stage 4</span> Resource Optimization</h4>
+          <p>Structural pruning with Calibration Dataset enabling deployment on resource-limited hardware without sacrificing performance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="has-text-centered" style="margin-top: 2rem;">
+      <div style="background: white; padding: 20px; border-radius: 10px; display: inline-block;">
+        <p><strong>Training Data:</strong> 1,813 dermatology cases across 8 critical disease classes</p>
+        <p><strong>Optimization Techniques:</strong> GRPO + DPO + Structural Pruning</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section results-section" id="results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Clinical-Grade Performance</h2>
+    
+    <div class="content">
+      <p class="has-text-centered">Our progressive enhancement approach delivered remarkable diagnostic capabilities, demonstrating significant improvements at each stage:</p>
+    </div>
+
+    <div class="performance-table">
+      <table class="table is-fullwidth is-striped">
+        <thead>
+          <tr>
+            <th>Enhancement Stage</th>
+            <th>Diagnostic Accuracy</th>
+            <th>Interaction Score</th>
+            <th>Clinical Readiness</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General AI Baseline</td>
+            <td>30.77%</td>
+            <td>3/10</td>
+            <td><span class="tag is-danger">Poor</span></td>
+          </tr>
+          <tr>
+            <td>+ Medical Reasoning</td>
+            <td><strong>79.49%</strong></td>
+            <td>2/10</td>
+            <td><span class="tag is-warning">Technical</span></td>
+          </tr>
+          <tr>
+            <td>+ Patient Communication</td>
+            <td>64.10%</td>
+            <td><strong>5/10</strong></td>
+            <td><span class="tag is-info">Improving</span></td>
+          </tr>
+          <tr>
+            <td>+ Interaction Optimization</td>
+            <td>64.10%</td>
+            <td><strong>8/10</strong></td>
+            <td><span class="tag is-success">Good</span></td>
+          </tr>
+          <tr>
+            <td>+ Resource Optimization</td>
+            <td>56.41%</td>
+            <td>6/10</td>
+            <td><span class="tag is-warning">Compressed</span></td>
+          </tr>
+          <tr style="background-color: #e8f5e8;">
+            <td><strong>+ Visual Intelligence</strong></td>
+            <td><strong>82.05%</strong></td>
+            <td><strong>7/10</strong></td>
+            <td><span class="tag is-success">Excellent</span></td>
+          </tr>
+          <tr style="background-color: #e8f5e8;">
+            <td><strong>+ Knowledge Grounding</strong></td>
+            <td><strong>82.05%</strong></td>
+            <td><strong>8/10</strong></td>
+            <td><span class="tag is-primary">Clinical-Ready</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-two-thirds">
+        <div class="notification is-primary">
+          <h4 class="title is-4 has-text-white">🏆 Key Achievement</h4>
+          <p class="has-text-white">
+            Our <strong>Derm-LLaVA</strong> achieved <strong>82.05% diagnostic accuracy</strong> (vs 30.77% baseline) with <strong>8/10 conversation quality</strong>, representing a breakthrough in multimodal medical AI for dermatological applications while maintaining computational efficiency through intelligent compression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Example Interaction</h2>
+    
+    <div class="conversation-demo">
+      <div class="has-text-centered" style="margin-bottom: 20px;">
+        <div style="background: #667eea; color: white; padding: 10px; border-radius: 10px; display: inline-block;">
+          <i class="fas fa-camera"></i> <strong>Patient uploads skin lesion image</strong>
+        </div>
+      </div>
+      
+      <div class="content">
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin: 10px 0; border-left: 4px solid #007bff;">
+          <strong>👤 Patient:</strong> "I've noticed this mole on my arm has been changing. Should I be concerned?"
+        </div>
+        
+        <div style="background: #e8f5e8; padding: 15px; border-radius: 10px; margin: 10px 0; border-left: 4px solid #28a745;">
+          <strong>🤖 Derm-LLaVA:</strong> "I understand your concern about the changing mole. Based on the image analysis, I can see this lesion has some characteristics that warrant professional evaluation. The asymmetry and color variation I observe suggest this should be examined by a dermatologist promptly. 
+          
+          <br><br><strong>Key observations:</strong>
+          <br>• Irregular borders and asymmetric shape
+          <br>• Multiple colors within the lesion
+          <br>• Size appears larger than 6mm
+          
+          <br><br><strong>Recommendation:</strong> Please schedule an appointment with a dermatologist within 1-2 weeks for proper evaluation. While I can provide preliminary analysis, a professional examination is essential for accurate diagnosis and appropriate treatment planning."
+        </div>
+      </div>
+      
+      <div class="has-text-centered">
+        <span class="tag is-success">✓ Accurate Analysis</span>
+        <span class="tag is-info">✓ Empathetic Response</span>
+        <span class="tag is-warning">✓ Appropriate Referral</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="impact">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Global Impact & Scaling Potential</h2>
+    
+    <div class="impact-grid">
+      <div class="impact-card">
+        <h4 class="title is-5"><i class="fas fa-hospital"></i> Primary Care Support</h4>
+        <p>Intelligent preliminary screening in underserved regions, providing expert-level initial assessment where specialists are unavailable.</p>
+      </div>
+      
+      <div class="impact-card">
+        <h4 class="title is-5"><i class="fas fa-video"></i> Telemedicine Enhancement</h4>
+        <p>AI-assisted remote consultations with expert validation, extending specialist reach to global communities.</p>
+      </div>
+      
+      <div class="impact-card">
+        <h4 class="title is-5"><i class="fas fa-graduation-cap"></i> Medical Education</h4>
+        <p>Interactive training platform for healthcare professionals, democratizing dermatological expertise.</p>
+      </div>
+      
+      <div class="impact-card">
+        <h4 class="title is-5"><i class="fas fa-ambulance"></i> Emergency Response</h4>
+        <p>Rapid diagnostic support in crisis situations, enabling immediate triage and treatment decisions.</p>
+      </div>
+    </div>
+
+    <div class="content has-text-centered" style="margin-top: 3rem;">
+      <h3 class="title is-4">Scaling Vision</h3>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h4 class="title is-5 has-text-white"><i class="fas fa-globe"></i> Transformative Potential</h4>
+            <p>This intelligent assistant demonstrates that AI can achieve clinically relevant diagnostic accuracy while maintaining compassionate patient interaction, creating unprecedented opportunities to democratize expert healthcare globally and save lives through accessible, intelligent medical assistance.</p>
+            
+            <div class="columns is-multiline" style="margin-top: 1rem;">
+              <div class="column is-half">
+                <p><strong>🔬 Specialty Expansion:</strong> Adapt to ophthalmology, cardiology, radiology</p>
+              </div>
+              <div class="column is-half">
+                <p><strong>🏥 Clinical Validation:</strong> Real-world trials with healthcare institutions</p>
+              </div>
+              <div class="column is-half">
+                <p><strong>📈 Continuous Learning:</strong> Federated learning from global deployment</p>
+              </div>
+              <div class="column is-half">
+                <p><strong>🔗 Healthcare Integration:</strong> Seamless EHR and workflow optimization</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{saha2025dermllava,
+  author    = {Saha, Aranya and Khan, Tanvir Ahmed and Swapnil, Ismam Nur and Haque, Mohammad Ariful},
+  title     = {AI-Powered Dermatological Assistant: Bridging Healthcare Gaps Through Multimodal Intelligence},
+  journal   = {Proceedings of Medical AI Conference},
+  year      = {2025},
 }</code></pre>
   </div>
 </section>
 
-
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
+      <p>
+        <strong>Derm-LLaVA</strong> - AI-Powered Dermatological Assistant
+      </p>
+      <p>
+        Department of Electrical and Electronic Engineering<br>
+        Bangladesh University of Engineering and Technology
+      </p>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This research represents a significant step toward democratizing healthcare through AI. Our goal is to make expert dermatological care accessible to the 2.6 billion people worldwide who currently lack access to specialized medical services.
           </p>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile navbar toggle
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+  
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
